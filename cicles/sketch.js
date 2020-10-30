@@ -1,4 +1,3 @@
-
 var x = 0;
 var y = 0;
 var spacing = 0;
@@ -16,16 +15,17 @@ function setup() {
   canvas.style('z-index', '-1');
   background(0);
   spacing = windowWidth/circlesMult;
+  widthAdj = 1;
 }
 
 function draw() {
-  if (windowWidth>=1920) {
-    widthAdj = 1;
+  if (windowWidth >= 1920){
+    widthAdj = 1.5;
   }
-  elseif ((windowWidth<1920) && (windowWidth>=480)) {
+  else {
     widthAdj = 0.5;
   }
-  elseif (windowWidth<480) {
+  if (windowWidth <= 854){
     widthAdj = 0.25;
   }
   circleSize = random(5,70)*widthAdj;
