@@ -2,6 +2,11 @@ let x = 0;
 let y = 0;
 let spacing = 20;
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  draw();
+}
+
 function setup() {
   createCanvas(windowWidth,windowHeight);
   background(0);
