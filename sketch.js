@@ -1,14 +1,12 @@
+var canvas;
+
 let x = 0;
 let y = 0;
 let spacing = 20;
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  draw();
-}
-
 function setup() {
-  createCanvas(windowWidth,windowHeight);
+  canvas = createCanvas(windowWidth,windowHeight);
+  canvas.position(0,0);
   background(0);
 }
 
