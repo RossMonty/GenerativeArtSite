@@ -14,11 +14,14 @@ function setup() {
   canvas.position(0,0);
   canvas.style('z-index', '-1');
   background(0);
-  spacing = width/circlesMult;
+  spacing = windowWidth/circlesMult;
 }
 
 function draw() {
-  circleSize = random(10,75);
+  if (windowWidth>=1920) {
+    circleSize = random(5,70);
+  }
+  else (circleSize = random(1,40);)
   xCol = xCol + colInc;
   yCol = yCol + colInc;
   zCol = zCol + colInc;
