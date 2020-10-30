@@ -51,7 +51,20 @@ body.custom-background { background-color: #ffffff; }
 </style>
 			<style id="wp-custom-css">
 			body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
-    color: #000000;
+    color: #ffffff;
+}
+
+#site-header, .footer-nav-widgets-wrapper, #site-footer, .menu-modal, .menu-modal-inner, .search-modal-inner, .archive-header, .singular .entry-header, .singular .featured-media:before, .wp-block-pullquote:before {
+    background-color: none
+		color: transparent;
+}
+
+.site-title a {
+	color: #ffffff;
+}
+
+.header-footer-group, body:not(.overlay-header) #site-header .toggle, .menu-modal .toggle {
+    color: #ffffff;
 }
 
 .page-id-32 .entry-title{
@@ -62,6 +75,10 @@ display:none !important;
 }
 .page-id-42 .entry-title{
 display:none !important;
+}
+
+.site-description, body:not(.overlay-header) .toggle-inner .toggle-text, .widget .post-date, .widget .rss-date, .widget_archive li, .widget_categories li, .widget cite, .widget_pages li, .widget_meta li, .widget_nav_menu li, .powered-by-wordpress, .to-the-top, .singular .entry-header .post-meta, .singular:not(.overlay-header) .entry-header .post-meta a {
+    color: #ffffff;
 }		</style>
 		
 	</head>
