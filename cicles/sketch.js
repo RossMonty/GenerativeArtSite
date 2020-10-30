@@ -1,8 +1,9 @@
 
-x = 0;
-y = 0;
-spacing = 0;
-circlesMult = 20;
+var x = 0;
+var y = 0;
+var spacing = 0;
+var circlesMult = 20;
+var widthAdj;
 
 xCol = 0.0;
 yCol = 0.0;
@@ -19,11 +20,16 @@ function setup() {
 
 function draw() {
   if (windowWidth>=1920) {
-    circleSize = random(5,70);
+    widthAdj = 1;
+  }
+  elseif ((windowWidth<1920) && (windowWidth>=480)) {
+    widthAdj = 0.5;
   }
   else {
-    circleSize = random(1,40);
+    widthAdj = 0.25;
   }
+  circleSize = random(5,70)*widthAdj;
+  
   xCol = xCol + colInc;
   yCol = yCol + colInc;
   zCol = zCol + colInc;
