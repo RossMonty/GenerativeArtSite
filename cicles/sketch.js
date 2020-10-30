@@ -25,11 +25,11 @@ function draw() {
   elseif ((windowWidth<1920) && (windowWidth>=480)) {
     widthAdj = 0.5;
   }
-  else {
+  elseif (windowWidth<480) {
     widthAdj = 0.25;
   }
   circleSize = random(5,70)*widthAdj;
-  
+
   xCol = xCol + colInc;
   yCol = yCol + colInc;
   zCol = zCol + colInc;
