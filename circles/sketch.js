@@ -13,7 +13,7 @@ function setup() {
   canvas = createCanvas(windowWidth,windowHeight);
   canvas.position(0,0);
   canvas.style('z-index', '-1');
-  background(0);
+  background(25);
   spacing = windowWidth/circlesMult;
   widthAdj = 1;
 }
