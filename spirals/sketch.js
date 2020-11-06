@@ -36,7 +36,7 @@ function mouseReleased() {
 
 function keyPressed() {
   if (keyCode === ENTER) {
-    background(0, 0, 0);
+    background(25);
   }
 }
 
