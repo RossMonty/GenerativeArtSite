@@ -2,7 +2,6 @@ var canvas;
 var responsiveness = 7;
 var spin = 1.05;
 var drag = 0.001;
-var numlines = 250;
 var lines = [];
 let setOrigin = false;
 var mX= 0.0;
@@ -13,6 +12,8 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   canvas.style('z-index', '-1');
+  const numlines = Math.min(Math.floor(windowWidth / 25), 100);
+
   background(25);
   for(let i = 0; i < numlines; i++) {
     lines.push(new Line());
