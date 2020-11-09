@@ -18,7 +18,6 @@ function setup() {
   canvas = createCanvas(windowWidth,windowHeight);
   canvas.position(0,0);
   canvas.style('z-index', '-1');
-
   if (windowWidth<=450) {
    numAcross = 10;
   } else
@@ -26,7 +25,7 @@ function setup() {
   if (windowWidth>=1920) {
     numAcross = 20;
   }
-  background(255);
+  background(25);
   stroke(255);
   smooth();
   squareWidth = width/numAcross;
@@ -52,6 +51,11 @@ function draw() {
 function tile() {
   push();
   noStroke();
+  fill(255,255);
+  rect(x,y,squareWidth,squareWidth);
+  pop();
+  push();
+  noStroke();
   fill(fillColour + hexAlph);
   rect(x,y,squareWidth,squareWidth);
   pop();
@@ -59,8 +63,5 @@ function tile() {
   noStroke();
   fill(fillColour + hexAlph);
   quad(x+random(0,squareWidth),y+random(0,squareWidth),x+random(0,squareWidth),y+random(0,squareWidth),x+random(0,squareWidth),y+random(0,squareWidth),x+random(0,squareWidth),y+random(0,squareWidth));
-  //arc(x,y,random(0,squareWidth),random(0,squareWidth),0,PI);
-  //line(random(x,x+squareWidth),y+squareWidth,x+squareWidth,y+random(0,squareWidth))
-  //triangle(random(x,x+squareWidth),y,x,y+squareWidth,x+squareWidth,y+random(0,squareWidth));
   pop();
 }

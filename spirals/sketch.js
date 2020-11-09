@@ -12,9 +12,8 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   canvas.style('z-index', '-1');
-  const numlines = Math.min(Math.floor(windowWidth / 25), 100);
-
   background(25);
+  const numlines = Math.min(Math.floor(windowWidth / 25), 100);
   for(let i = 0; i < numlines; i++) {
     lines.push(new Line());
   }
